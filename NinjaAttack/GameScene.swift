@@ -1,30 +1,5 @@
 /// Copyright (c) 2018 Razeware LLC
-/// 
-/// Permission is hereby granted, free of charge, to any person obtaining a copy
-/// of this software and associated documentation files (the "Software"), to deal
-/// in the Software without restriction, including without limitation the rights
-/// to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-/// copies of the Software, and to permit persons to whom the Software is
-/// furnished to do so, subject to the following conditions:
-/// 
-/// The above copyright notice and this permission notice shall be included in
-/// all copies or substantial portions of the Software.
-/// 
-/// Notwithstanding the foregoing, you may not use, copy, modify, merge, publish,
-/// distribute, sublicense, create a derivative work, and/or sell copies of the
-/// Software in any work that is designed, intended, or marketed for pedagogical or
-/// instructional purposes related to programming, coding, application development,
-/// or information technology.  Permission for such use, copying, modification,
-/// merger, publication, distribution, sublicensing, creation of derivative works,
-/// or sale is expressly withheld.
-/// 
-/// THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-/// IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-/// FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-/// AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-/// LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-/// OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-/// THE SOFTWARE.
+
 
 import SpriteKit
 
@@ -77,38 +52,72 @@ public var screenHeight: CGFloat {
 
 class GameScene: SKScene {
   // 1
-  let player = SKSpriteNode(imageNamed: "player")
+  let player = Player()
+  let ennemy = SKSpriteNode(imageNamed: "ennemy")
   var background = SKSpriteNode(imageNamed: "battleground2d")
   var bar1 = SKSpriteNode(imageNamed: "bar")
   var bar2 = SKSpriteNode(imageNamed: "bar")
   var bar3 = SKSpriteNode(imageNamed: "bar")
-  let screen_size = CGSize(width:screenWidth,height:screenHeight)
-  //let joueur_ground = SKSpriteNode(UIColor.blue,screen_size)
+  var visuTri = SKSpriteNode(imageNamed: "tri")
+  var visuCer = SKSpriteNode(imageNamed: "cer")
+  var visuRec = SKSpriteNode(imageNamed: "rec")
+  var surface = SKSpriteNode(imageNamed: "square")
+  var currentSelected = "none"
+  
+  let grid = Grid(blockSize: 60.0, rows:5, cols:6)
+
   //Called immediately after a scene is presented by a view.
   override func didMove(to view: SKView) {
-    print(screen_size) // 812 375
+    //screen size =  812 375
+   
+    grid.position = CGPoint (x:frame.midX+30, y:frame.midY)
     
-    //backgroundColor = SKColor.white
     player.position = CGPoint(x: size.width * 0.05, y: size.height * 0.5)
+    ennemy.position = CGPoint(x: size.width * 0.92, y: size.height * 0.5)
+    //backgroundColor = SKColor.white
+    bar1.position = CGPoint(x: size.width * 0.1, y: size.height * 0.5)
+    bar2.position = CGPoint(x: size.width * 0.24, y: size.height * 0.5)
+    bar3.position = CGPoint(x: size.width * 0.84, y: size.height * 0.5)
     background.position = CGPoint(x: size.width/2, y:size.height/2)
+    visuTri.position = CGPoint(x: size.width * 0.17, y: size.height * 0.8)
+    visuTri.zPosition = 0.1
+    visuCer.position = CGPoint(x: size.width * 0.17, y: size.height * 0.5)
+    visuCer.zPosition = 0.1
+    visuRec.position = CGPoint(x: size.width * 0.17, y: size.height * 0.2)
+    visuRec.zPosition = 0.1
+    visuTri.name = "tri"
+    visuCer.name = "cer"
+    visuRec.name = "rec"
+    visuTri.isUserInteractionEnabled = false
+    surface.isHidden=true
     
+    addChild(grid)
     //addChild(background)
     addChild(player)
-    
+    addChild(ennemy)
+    addChild(bar1)
+    addChild(bar2)
+    addChild(bar3)
+    addChild(visuTri)
+    addChild(visuCer)
+    addChild(visuRec)
+    addChild(surface)
+
     physicsWorld.gravity = .zero
     // si 2 objet de la scene rentre en collision on call un type SKPhysicsContactDelegate
     // donc "self" voir extension
     physicsWorld.contactDelegate = self
     
     // gere le pop de monstre a l'infini
-    run(SKAction.repeatForever(
+    /*run(SKAction.repeatForever(
       SKAction.sequence([
         // lance addMonster
         SKAction.run(addMonster),
         // att 5sec
         SKAction.wait(forDuration: 5.0)
         ])
-    ))
+    ))*/
+ 
     //let backgroundMusic = SKAudioNode(fileNamed: "background-music-aac.caf")
     //backgroundMusic.autoplayLooped = true
     //addChild(backgroundMusic)
@@ -116,18 +125,62 @@ class GameScene: SKScene {
   
   // trigerred when the touch (click) happenned Set<UITouch>
   override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-    // 1 - on prends seulement le prenier toucher
+    // 1 - on prends seulement le premier toucher
     guard let touch = touches.first else {
       return
     }
     let touchLocation = touch.location(in: self)
     print(touchLocation)
+    let touchedNode = self.nodes(at: touchLocation)
+        if touchedNode.count > 0{
+      let sprite = touchedNode[0].name
+      switch sprite {
+      case "tri":
+        print("touched tri")
+        if !player.buyUnit(cost: 100){
+          print("not enough money !")
+        }
+        else{
+          //let tri = Tri()
+          if self.currentSelected==sprite!{
+            surface.isHidden=true
+            self.currentSelected = "none"
+          }
+          else{
+            surface.position = visuTri.position
+            surface.isHidden=false
+            self.currentSelected=sprite!
+          }
+          //tri.position = grid.gridPosition(row: 1, col: 0)
+          //tri.position.x = frame.midX + tri.position.x
+          //tri.position.y = frame.midY + tri.position.y
+          //tri.spawn(scene: self, position: tri.position)
+        }
+        
+      // cree l'objet dans le jeu objet tri (voir comment faire cohabiter plusieurs instances)
+      case "rec":
+        surface.position = visuRec.position
+        surface.isHidden=false
+        self.currentSelected=sprite!
+        //addChild(surface)
+        print("touched rec")
+      case "cer":
+        surface.position = visuCer.position
+        surface.isHidden=false
+        self.currentSelected=sprite!
+        //addChild(surface)
+        print("touched cer")
+      default:
+        print("nothing touched")
+      }
+    }
+  
     // gere le cas si le touch est derriere le player projectile.p = player.p
     let offset = touchLocation - player.position
     if offset.x < 0 { return }
     
     // run le pew pew son
-    run(SKAction.playSoundFileNamed("pew-pew-lei.caf", waitForCompletion: false))
+    //run(SKAction.playSoundFileNamed("pew-pew-lei.caf", waitForCompletion: false))
     // get la position du toucher
     
     // Create Sprite 2 ( Projectile)
@@ -166,6 +219,7 @@ class GameScene: SKScene {
     return random() * (max - min) + min
   }
   
+  
   func addMonster() {
     // Create sprite
     let monster = SKSpriteNode(imageNamed: "monster")
@@ -197,6 +251,10 @@ class GameScene: SKScene {
                                    duration: TimeInterval(actualDuration))
     let actionMoveDone = SKAction.removeFromParent()
     monster.run(SKAction.sequence([actionMove, actionMoveDone]))
+  }
+  
+  func resetCurrentSelected(){
+    
   }
   
   func projectileDidCollideWithMonster(projectile: SKSpriteNode, monster: SKSpriteNode) {

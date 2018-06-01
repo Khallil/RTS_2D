@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		5C2901831F8F6DE700803663 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C2901821F8F6DE700803663 /* LaunchScreen.storyboard */; };
+		7EDF8A2F20C0D2DD0071D2A3 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDF8A2E20C0D2DD0071D2A3 /* Player.swift */; };
+		7EDF8A3120C0D9740071D2A3 /* Unit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDF8A3020C0D9740071D2A3 /* Unit.swift */; };
+		7EDF8A3320C0DD7A0071D2A3 /* Rec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDF8A3220C0DD7A0071D2A3 /* Rec.swift */; };
+		7EDF8A3620C0F6DE0071D2A3 /* Cer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDF8A3520C0F6DE0071D2A3 /* Cer.swift */; };
+		7EDF8A3820C0F6FC0071D2A3 /* Tri.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDF8A3720C0F6FC0071D2A3 /* Tri.swift */; };
+		7EDF8A3A20C110FF0071D2A3 /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDF8A3920C110FF0071D2A3 /* Grid.swift */; };
 		AFD63F872036493600E08C66 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD63F862036493600E08C66 /* GameViewController.swift */; };
 		AFD63F892036497100E08C66 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD63F882036497100E08C66 /* GameScene.swift */; };
 		AFD63F8F203649F800E08C66 /* background-music-aac.caf in Resources */ = {isa = PBXBuildFile; fileRef = AFD63F8D203649F800E08C66 /* background-music-aac.caf */; };
@@ -20,6 +26,12 @@
 /* Begin PBXFileReference section */
 		5C2901821F8F6DE700803663 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = NinjaAttack/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7E1413CF20BFF30600156688 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		7EDF8A2E20C0D2DD0071D2A3 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Player.swift; path = NinjaAttack/Player.swift; sourceTree = "<group>"; };
+		7EDF8A3020C0D9740071D2A3 /* Unit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Unit.swift; path = NinjaAttack/Unit.swift; sourceTree = "<group>"; };
+		7EDF8A3220C0DD7A0071D2A3 /* Rec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rec.swift; sourceTree = "<group>"; };
+		7EDF8A3520C0F6DE0071D2A3 /* Cer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cer.swift; sourceTree = "<group>"; };
+		7EDF8A3720C0F6FC0071D2A3 /* Tri.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tri.swift; sourceTree = "<group>"; };
+		7EDF8A3920C110FF0071D2A3 /* Grid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
 		AFD63F862036493600E08C66 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GameViewController.swift; path = NinjaAttack/GameViewController.swift; sourceTree = "<group>"; };
 		AFD63F882036497100E08C66 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GameScene.swift; path = NinjaAttack/GameScene.swift; sourceTree = "<group>"; };
 		AFD63F8D203649F800E08C66 /* background-music-aac.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "background-music-aac.caf"; sourceTree = "<group>"; };
@@ -42,6 +54,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7EDF8A3420C0DFF90071D2A3 /* Units */ = {
+			isa = PBXGroup;
+			children = (
+				7EDF8A3220C0DD7A0071D2A3 /* Rec.swift */,
+				7EDF8A3720C0F6FC0071D2A3 /* Tri.swift */,
+				7EDF8A3520C0F6DE0071D2A3 /* Cer.swift */,
+			);
+			path = Units;
+			sourceTree = "<group>";
+		};
 		AFD63F8C203649F800E08C66 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +96,7 @@
 		D2A5F2021F4A9144005CD714 /* NinjaAttack */ = {
 			isa = PBXGroup;
 			children = (
+				7EDF8A3420C0DFF90071D2A3 /* Units */,
 				AFD63F8C203649F800E08C66 /* Sounds */,
 				D2A5F2201F4A96D0005CD714 /* AppDelegate.swift */,
 				D2A5F2071F4A9144005CD714 /* Main.storyboard */,
@@ -83,6 +106,9 @@
 				AFD63F882036497100E08C66 /* GameScene.swift */,
 				AFD63F862036493600E08C66 /* GameViewController.swift */,
 				7E1413CF20BFF30600156688 /* README.md */,
+				7EDF8A2E20C0D2DD0071D2A3 /* Player.swift */,
+				7EDF8A3020C0D9740071D2A3 /* Unit.swift */,
+				7EDF8A3920C110FF0071D2A3 /* Grid.swift */,
 			);
 			name = NinjaAttack;
 			sourceTree = "<group>";
@@ -162,9 +188,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EDF8A3120C0D9740071D2A3 /* Unit.swift in Sources */,
+				7EDF8A2F20C0D2DD0071D2A3 /* Player.swift in Sources */,
+				7EDF8A3320C0DD7A0071D2A3 /* Rec.swift in Sources */,
+				7EDF8A3820C0F6FC0071D2A3 /* Tri.swift in Sources */,
 				AFD63F892036497100E08C66 /* GameScene.swift in Sources */,
 				AFD63F872036493600E08C66 /* GameViewController.swift in Sources */,
+				7EDF8A3620C0F6DE0071D2A3 /* Cer.swift in Sources */,
 				D2A5F2211F4A96D0005CD714 /* AppDelegate.swift in Sources */,
+				7EDF8A3A20C110FF0071D2A3 /* Grid.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,6 +11,12 @@
     invoquer_objet()
     remove_item()
 
+  Player herite du type SKSpriteNode
+  composant:
+    vie
+    total ressources
+    image
+    position
 
 Mettre en place des vecteurs de placement
     0    a  w * 0.105
@@ -23,4 +29,8 @@ de [x2 a x3] = placement du battleground
 de [x3 a x4] = placement du joueur IA en face
 
 TODO :
-  set les bar
+implementer la classe player
+  implementer les objet class Unit
+  
+  quand on clique ca preleve les ressources de players
+  
