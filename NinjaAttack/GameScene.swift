@@ -64,7 +64,7 @@ class GameScene: SKScene {
   var surface = SKSpriteNode(imageNamed: "square")
   var currentSelected = "none"
   
-  let grid = Grid(blockSize: 60.0, rows:5, cols:6)
+  let grid = Grid(blockSize: 60.0, rows:6, cols:6)
 
   //Called immediately after a scene is presented by a view.
   override func didMove(to view: SKView) {
@@ -108,6 +108,14 @@ class GameScene: SKScene {
     // donc "self" voir extension
     physicsWorld.contactDelegate = self
     
+    grid.setXYsquare(middle_x:frame.midX,middle_y:frame.midY)
+      //x_ left = (x_size / 2) - sizeblock * ( n_block / 2)
+    /*x_left = 218
+    x_right = 580
+    y_up = 384
+    y_down = 26
+    */
+    
     // gere le pop de monstre a l'infini
     /*run(SKAction.repeatForever(
       SKAction.sequence([
@@ -130,49 +138,65 @@ class GameScene: SKScene {
       return
     }
     let touchLocation = touch.location(in: self)
-    print(touchLocation)
+    print("Touch Location : ",touchLocation)
     let touchedNode = self.nodes(at: touchLocation)
-        if touchedNode.count > 0{
+    var block = Block()
+    
+    if touchedNode.count > 0{
       let sprite = touchedNode[0].name
       switch sprite {
-      case "tri":
-        print("touched tri")
-        if !player.buyUnit(cost: 100){
-          print("not enough money !")
-        }
-        else{
-          //let tri = Tri()
-          if self.currentSelected==sprite!{
-            surface.isHidden=true
-            self.currentSelected = "none"
-          }
-          else{
-            surface.position = visuTri.position
+          case "tri":
+            print("touched tri")
+            if !player.buyUnit(cost: 100){
+              print("not enough money !")
+            }
+            else{
+              // enleve le selected highlight si est deja sur le triangle
+              if self.currentSelected==sprite!{
+                surface.isHidden=true
+                self.currentSelected = "none"
+              }
+              else{
+                surface.position = visuTri.position
+                surface.isHidden=false
+                self.currentSelected=sprite!
+              }
+              //tri.position = grid.gridPosition(row: 1, col: 0)
+              //tri.position.x = frame.midX + tri.position.x
+              //tri.position.y = frame.midY + tri.position.y
+              //tri.spawn(scene: self, position: tri.position)
+            }
+        
+          // cree l'objet dans le jeu objet tri (voir comment faire cohabiter plusieurs instances)
+          case "rec":
+            surface.position = visuRec.position
             surface.isHidden=false
             self.currentSelected=sprite!
-          }
-          //tri.position = grid.gridPosition(row: 1, col: 0)
-          //tri.position.x = frame.midX + tri.position.x
-          //tri.position.y = frame.midY + tri.position.y
-          //tri.spawn(scene: self, position: tri.position)
+            //addChild(surface)
+            print("touched rec")
+          case "cer":
+            surface.position = visuCer.position
+            surface.isHidden=false
+            self.currentSelected=sprite!
+            //addChild(surface)
+            print("touched cer")
+          default:
+            print("none sprite selected")
         }
+    }
+      
+    if grid.isTouchInGrid(point: touchLocation){
         
-      // cree l'objet dans le jeu objet tri (voir comment faire cohabiter plusieurs instances)
-      case "rec":
-        surface.position = visuRec.position
-        surface.isHidden=false
-        self.currentSelected=sprite!
-        //addChild(surface)
-        print("touched rec")
-      case "cer":
-        surface.position = visuCer.position
-        surface.isHidden=false
-        self.currentSelected=sprite!
-        //addChild(surface)
-        print("touched cer")
-      default:
-        print("nothing touched")
-      }
+        print("grid is touched !")
+        block = grid.getBlockTouched(point:touchLocation)
+        let tri = Tri()
+        switch self.currentSelected {
+            case "tri":
+                tri.position = grid.gridPosition(row: block.row+1, col: block.col+1)
+                tri.spawn(scene: self, position: tri.position)
+            default:
+                print("no item selected")
+        }
     }
   
     // gere le cas si le touch est derriere le player projectile.p = player.p

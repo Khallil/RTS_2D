@@ -20,6 +20,7 @@ class Player: SKSpriteNode {
       return false
     }
     self.money = self.money - cost
+    print(self.money)
     return true
   }
   
