@@ -14,13 +14,13 @@ class Unit: SKSpriteNode{
     self.name = name
   }
   
-  required init?(coder aDecoder: NSCoder)
-  {
+  required init?(coder aDecoder: NSCoder){
     fatalError("init(coder:) has not been implemented")
   }
   
-  func unitPlacement(_ blocks:Array<Block>,_ player:Player,_ scene:SKScene,_ node:SKNode, _ index:Int, _ grid:Grid,_ name:String)-> Array<Block>{
+  func unitPlacement(_ blocks:Array<Block>,_ player:Player,_ scene:SKScene,_ node:SKNode, _ index:Int, _ grid:Grid,_ name:String, _ units:Array<SKSpriteNode>)-> (Array<Block>,Array<SKSpriteNode>){
     var blocks = blocks
+    var units = units
     let block = blocks[index]
     if block.isFree == true && block.unit_name != name{
       if !player.buyUnit(cost: cost){
@@ -31,6 +31,7 @@ class Unit: SKSpriteNode{
         blocks[index].unit_name = name
         self.position = grid.gridPosition(row: block.coor.row+1, col: block.coor.col+1)
         scene.addChild(self)
+        units.append(self)
       }
     }
     else if block.unit_name == name{
@@ -40,6 +41,7 @@ class Unit: SKSpriteNode{
         blocks[index].isFree = true
         blocks[index].unit_name = ""
         player.addMoney(self.cost)
+        units = removeNodeFromArray(self.position,units)
       }
       else{
         print("ca fait un son erreur")
@@ -48,7 +50,7 @@ class Unit: SKSpriteNode{
     else{
       print("ca fait un son erreur")
     }
-    return blocks
+    return (blocks,units)
   }
   
   // attaquer

@@ -45,6 +45,17 @@ func findTarget(_ unit:SKSpriteNode,_ player_units: Array<SKSpriteNode>)->SKSpri
   return target
 }
 
+func removeNodeFromArray(_ position:CGPoint,_ units: Array<SKSpriteNode>)-> Array<SKSpriteNode>{
+  var units = units
+  for unit in units{
+    if unit.position == position{
+      units.remove(at:units.index(of:unit)!)
+      return units
+    }
+  }
+  return units
+}
+
 extension CGPoint {
   func length() -> CGFloat {
     return sqrt(x*x + y*y)

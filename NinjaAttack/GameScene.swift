@@ -7,6 +7,9 @@ struct PhysicsCategory {
     static let all       : UInt32 = UInt32.max
     static let monster   : UInt32 = 0b1       // 1
     static let projectile: UInt32 = 0b10      // 2
+    static let tri       : UInt32 = 0b11      // 3
+    static let cer       : UInt32 = 0b100      // 4
+    static let rec       : UInt32 = 0b101      // 5
 }
 
 #if !(arch(x86_64) || arch(arm64))
@@ -98,14 +101,14 @@ class GameScene: SKScene {
         switch self.currentSelected {
         case "visuTri":
             let tri = Tri()
-            blocks = tri.unitPlacement(blocks,player,self,node,index,grid,"tri")
+            (blocks,enemy_units) = tri.unitPlacement(blocks,player,self,node,index,grid,"tri",enemy_units)
         case "visuRec":
             let rec = Rec()
-            blocks = rec.unitPlacement(blocks,player,self,node,index,grid,"rec")
+            (blocks,player_units) = rec.unitPlacement(blocks,player,self,node,index,grid,"rec",player_units)
         case "visuCer":
             let cer = Cer()
-            blocks = cer.unitPlacement(blocks,player,self,node,index,grid,"cer")
-            player_units.append(cer)
+            (blocks,player_units) = cer.unitPlacement(blocks,player,self,node,index,grid,"cer",player_units)
+            print("len player_units : ",player_units.count)
         default:
             print("no item selected")
         }
@@ -164,7 +167,7 @@ class GameScene: SKScene {
             // lance addMonster
             SKAction.run({self.addProjectile(unit)}),
             // att 5sec
-            SKAction.wait(forDuration: 5.0)
+            SKAction.wait(forDuration: 1.0)
             ])
         ))
       }
@@ -181,22 +184,22 @@ class GameScene: SKScene {
       projectile.physicsBody = SKPhysicsBody(circleOfRadius: projectile.size.width/2)
       projectile.physicsBody?.isDynamic = true
       projectile.physicsBody?.categoryBitMask = PhysicsCategory.projectile
-      //projectile.physicsBody?.contactTestBitMask = PhysicsCategory.monster
+      projectile.physicsBody?.contactTestBitMask = PhysicsCategory.cer
       //projectile.physicsBody?.collisionBitMask = PhysicsCategory.none
       // pour utiliser un algo ameliorer de detection de collision
-      //projectile.physicsBody?.usesPreciseCollisionDetection = true
+      projectile.physicsBody?.usesPreciseCollisionDetection = true
       addChild(projectile)
     
       let target_unit = findTarget(unit, player_units)
       let direction = target_unit.position
       // 7 - Make it shoot far enough to be guaranteed off screen
-      let shootAmount = direction * 1000
+      /*let shootAmount = direction * 1000
     
       // 8 - Add the shoot amount to the current position
-      let realDest = shootAmount + projectile.position
-    
+      let realDest = shootAmount + target_unit.position
+    */
       // 9 - Create the actions
-      let actionMove = SKAction.move(to: realDest, duration: 2.0)
+      let actionMove = SKAction.move(to: direction, duration: 5.0)
       let actionMoveDone = SKAction.removeFromParent()
       projectile.run(SKAction.sequence([actionMove, actionMoveDone]))
       return
@@ -227,16 +230,15 @@ class GameScene: SKScene {
         let actualDuration = 3
 
         // set un objectif de destination en x et en y
-        let actionMove = SKAction.move(to: CGPoint(x: -monster.size.width, y: actualY),
-                                       duration: TimeInterval(actualDuration))
+        let actionMove = SKAction.move(to: CGPoint(x: -monster.size.width, y: actualY),duration: TimeInterval(actualDuration))
         let actionMoveDone = SKAction.removeFromParent()
         monster.run(SKAction.sequence([actionMove, actionMoveDone]))
     }
   
-    func projectileDidCollideWithMonster(projectile: SKSpriteNode, monster: SKSpriteNode) {
+    func projectileDidCollideWithMonster(_ projectile: SKSpriteNode, _ node: SKSpriteNode) {
         print("Hit")
-        //projectile.removeFromParent
-        monster.removeFromParent()
+        projectile.removeFromParent()
+        //monster.removeFromParent()
     }
 
     func init_scene(){
@@ -278,7 +280,7 @@ extension GameScene: SKPhysicsContactDelegate {
     var firstBody: SKPhysicsBody
     var secondBody: SKPhysicsBody
     
-    //0b1 monster 0b10 projectile
+    //projectile < cer
     if contact.bodyA.categoryBitMask < contact.bodyB.categoryBitMask {
       firstBody = contact.bodyA
       secondBody = contact.bodyB
@@ -288,11 +290,12 @@ extension GameScene: SKPhysicsContactDelegate {
     }
     
     // Assigne les bons objets au contact objets pour pouvoir les reutiliser apres
-    if ((firstBody.categoryBitMask & PhysicsCategory.monster != 0) &&
-      (secondBody.categoryBitMask & PhysicsCategory.projectile != 0)) {
-      if let monster = firstBody.node as? SKSpriteNode,
-        let projectile = secondBody.node as? SKSpriteNode {
-        projectileDidCollideWithMonster(projectile: projectile, monster: monster)
+    print("truc chelou",firstBody.categoryBitMask & PhysicsCategory.projectile)
+    if ((firstBody.categoryBitMask & PhysicsCategory.projectile != 0) &&
+      (secondBody.categoryBitMask & PhysicsCategory.cer != 0)) {
+      if let projectile = firstBody.node as? SKSpriteNode,
+        let node = secondBody.node as? SKSpriteNode {
+        projectileDidCollideWithMonster(projectile, node)
       }
     }
   }
