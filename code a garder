@@ -1,0 +1,35 @@
+
+
+! Dans touchesEnded a la fin
+// Create Sprite 2 ( Projectile)
+let projectile = SKSpriteNode(imageNamed: "projectile")
+projectile.position = player.position
+projectile.physicsBody = SKPhysicsBody(circleOfRadius: projectile.size.width/2)
+projectile.physicsBody?.isDynamic = true
+projectile.physicsBody?.categoryBitMask = PhysicsCategory.projectile
+projectile.physicsBody?.contactTestBitMask = PhysicsCategory.monster
+projectile.physicsBody?.collisionBitMask = PhysicsCategory.none
+// pour utiliser un algo ameliorer de detection de collision
+projectile.physicsBody?.usesPreciseCollisionDetection = true
+addChild(projectile)
+
+// gere le pop de monstre a l'infini
+/*run(SKAction.repeatForever(
+SKAction.sequence([
+// lance addMonster
+SKAction.run(addMonster),
+// att 5sec
+SKAction.wait(forDuration: 5.0)
+])
+))*/
+
+
+//let backgroundMusic = SKAudioNode(fileNamed: "background-music-aac.caf")
+//backgroundMusic.autoplayLooped = true
+//addChild(backgroundMusic)
+
+
+// run le pew pew son
+//run(SKAction.playSoundFileNamed("pew-pew-lei.caf", waitForCompletion: false))
+// get la position du toucher 
+

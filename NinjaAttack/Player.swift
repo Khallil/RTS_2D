@@ -24,8 +24,15 @@ class Player: SKSpriteNode {
     return true
   }
   
-  required init?(coder aDecoder: NSCoder)
-  {
+  func getMoney() -> Int{
+    return self.money
+  }
+  
+  func addMoney(_ money: Int){
+    self.money = self.money + money
+  }
+  
+  required init?(coder aDecoder: NSCoder){
     fatalError("init(coder:) has not been implemented")
   }
 }

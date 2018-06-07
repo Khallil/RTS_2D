@@ -3,9 +3,15 @@
 import Foundation
 import SpriteKit
 
+struct Coor{
+  var row:Int
+  var col:Int
+}
+
 struct Block{
-  var row = 0
-  var col = 0
+  var coor:Coor
+  var unit_name:String
+  var isFree:Bool
 }
 
 class Grid:SKSpriteNode {
@@ -71,27 +77,13 @@ class Grid:SKSpriteNode {
   }
   
   func gridPosition(row:Int, col:Int) -> CGPoint {
-    let offset = blockSize / 2.0
     let b_cols = (blockSize * CGFloat(cols)) / 2.0
-    let b_rows = (blockSize * CGFloat(rows)) / 2.0
     let x = (CGFloat(col) * blockSize - b_cols) + middle_x
-    //print("on veut : ", CGFloat(col),blockSize,b_cols,middle_x)
-    //let y = (CGFloat(rows - row - 1) * blockSize - b_rows) + middle_y
     let y = CGFloat(row) * blockSize
-    //print("on veut : ", CGFloat(rows - row - 1),blockSize,b_rows,middle_y)
-
     return CGPoint(x:x, y:y)
   }
   
   func isTouchInGrid(point:CGPoint)-> Bool{
-  /*x_left = 218
-   x_right = 580
-   y_up = 384
-   y_down = 26*/
-   print(x_right)
-   print(x_left)
-   print(y_up)
-   print(y_down)
    if (x_left...x_right ~= point.x) && (y_down...y_up ~= point.y){
         return true
       }
@@ -100,18 +92,23 @@ class Grid:SKSpriteNode {
       }
     }
   
-  func getBlockTouched(point:CGPoint)-> Block{
-    var block = Block()
+  func getIndexBlockTouched(_ point:CGPoint,_ blocks:Array<Block>)-> Int{
+    // get le tableau
+    var i = 0
     let x_touch = point.x - self.dfs_x
     let y_touch = point.y - self.dfs_y
-    block.col = Int((x_touch / blockSize).rounded(.down) )
-    block.row = Int((y_touch / blockSize).rounded(.down))
-    print("block.row",block.row)
-    print("block.col",block.col)
-    return block
+    let col = Int((x_touch / blockSize).rounded(.down) )
+    let row = Int((y_touch / blockSize).rounded(.down))
+    for block in blocks{
+      if block.coor.row == row && block.coor.col == col{
+        return i
+      }
+      i = i + 1
+    }
+    return -1
   }
   
-  func setXYsquare(middle_x:CGFloat,middle_y:CGFloat){
+  func initValues(middle_x:CGFloat,middle_y:CGFloat){
     let nb_rows = CGFloat(6/2)
     self.middle_y = middle_y
     self.middle_x = middle_x

@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		5C2901831F8F6DE700803663 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C2901821F8F6DE700803663 /* LaunchScreen.storyboard */; };
+		7E5B035A20C533A9005CB1C0 /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5B035920C533A9005CB1C0 /* Tools.swift */; };
+		7E5B035C20C535FF005CB1C0 /* code a garder in Resources */ = {isa = PBXBuildFile; fileRef = 7E5B035B20C535FF005CB1C0 /* code a garder */; };
+		7E5B035E20C54509005CB1C0 /* AthensClassic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7E5B035D20C54502005CB1C0 /* AthensClassic.ttf */; };
 		7EDF8A2F20C0D2DD0071D2A3 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDF8A2E20C0D2DD0071D2A3 /* Player.swift */; };
 		7EDF8A3120C0D9740071D2A3 /* Unit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDF8A3020C0D9740071D2A3 /* Unit.swift */; };
 		7EDF8A3320C0DD7A0071D2A3 /* Rec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDF8A3220C0DD7A0071D2A3 /* Rec.swift */; };
@@ -26,6 +29,9 @@
 /* Begin PBXFileReference section */
 		5C2901821F8F6DE700803663 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = NinjaAttack/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7E1413CF20BFF30600156688 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		7E5B035920C533A9005CB1C0 /* Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
+		7E5B035B20C535FF005CB1C0 /* code a garder */ = {isa = PBXFileReference; lastKnownFileType = text; path = "code a garder"; sourceTree = "<group>"; };
+		7E5B035D20C54502005CB1C0 /* AthensClassic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AthensClassic.ttf; sourceTree = "<group>"; };
 		7EDF8A2E20C0D2DD0071D2A3 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Player.swift; path = NinjaAttack/Player.swift; sourceTree = "<group>"; };
 		7EDF8A3020C0D9740071D2A3 /* Unit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Unit.swift; path = NinjaAttack/Unit.swift; sourceTree = "<group>"; };
 		7EDF8A3220C0DD7A0071D2A3 /* Rec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rec.swift; sourceTree = "<group>"; };
@@ -79,6 +85,7 @@
 			children = (
 				D2A5F2021F4A9144005CD714 /* NinjaAttack */,
 				D2A5F2011F4A9144005CD714 /* Products */,
+				7E5B035D20C54502005CB1C0 /* AthensClassic.ttf */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -109,6 +116,8 @@
 				7EDF8A2E20C0D2DD0071D2A3 /* Player.swift */,
 				7EDF8A3020C0D9740071D2A3 /* Unit.swift */,
 				7EDF8A3920C110FF0071D2A3 /* Grid.swift */,
+				7E5B035920C533A9005CB1C0 /* Tools.swift */,
+				7E5B035B20C535FF005CB1C0 /* code a garder */,
 			);
 			name = NinjaAttack;
 			sourceTree = "<group>";
@@ -173,6 +182,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E5B035E20C54509005CB1C0 /* AthensClassic.ttf in Resources */,
+				7E5B035C20C535FF005CB1C0 /* code a garder in Resources */,
 				AFD63F8F203649F800E08C66 /* background-music-aac.caf in Resources */,
 				D2A5F20B1F4A9144005CD714 /* Assets.xcassets in Resources */,
 				5C2901831F8F6DE700803663 /* LaunchScreen.storyboard in Resources */,
@@ -197,6 +208,7 @@
 				7EDF8A3620C0F6DE0071D2A3 /* Cer.swift in Sources */,
 				D2A5F2211F4A96D0005CD714 /* AppDelegate.swift in Sources */,
 				7EDF8A3A20C110FF0071D2A3 /* Grid.swift in Sources */,
+				7E5B035A20C533A9005CB1C0 /* Tools.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
