@@ -12,7 +12,7 @@
         <!--Game View Controller-->
         <scene sceneID="p8M-z6-AOA">
             <objects>
-                <viewController id="e83-vN-vyi" customClass="GameViewController" customModule="NinjaAttack" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="e83-vN-vyi" customClass="GameViewController" customModule="Starcraft2D" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pJV-r6-aut" customClass="SKView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

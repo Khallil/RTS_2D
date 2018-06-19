@@ -28,27 +28,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5C2901821F8F6DE700803663 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = NinjaAttack/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5C2901821F8F6DE700803663 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = Starcraft2D/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7E1413CF20BFF30600156688 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		7E33C98820D8B19C0012FEFB /* HealthBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthBar.swift; sourceTree = "<group>"; };
 		7E5B035920C533A9005CB1C0 /* Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
 		7E5B035B20C535FF005CB1C0 /* code a garder */ = {isa = PBXFileReference; lastKnownFileType = text; path = "code a garder"; sourceTree = "<group>"; };
 		7E5B035D20C54502005CB1C0 /* AthensClassic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AthensClassic.ttf; sourceTree = "<group>"; };
-		7EDF8A2E20C0D2DD0071D2A3 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Player.swift; path = NinjaAttack/Player.swift; sourceTree = "<group>"; };
-		7EDF8A3020C0D9740071D2A3 /* Unit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Unit.swift; path = NinjaAttack/Unit.swift; sourceTree = "<group>"; };
+		7EDF8A2E20C0D2DD0071D2A3 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Player.swift; path = Starcraft2D/Player.swift; sourceTree = "<group>"; };
+		7EDF8A3020C0D9740071D2A3 /* Unit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Unit.swift; path = Starcraft2D/Unit.swift; sourceTree = "<group>"; };
 		7EDF8A3220C0DD7A0071D2A3 /* Rec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rec.swift; sourceTree = "<group>"; };
 		7EDF8A3520C0F6DE0071D2A3 /* Cer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cer.swift; sourceTree = "<group>"; };
 		7EDF8A3720C0F6FC0071D2A3 /* Tri.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tri.swift; sourceTree = "<group>"; };
 		7EDF8A3920C110FF0071D2A3 /* Grid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
-		AFD63F862036493600E08C66 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GameViewController.swift; path = NinjaAttack/GameViewController.swift; sourceTree = "<group>"; };
-		AFD63F882036497100E08C66 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GameScene.swift; path = NinjaAttack/GameScene.swift; sourceTree = "<group>"; };
+		AFD63F862036493600E08C66 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GameViewController.swift; path = Starcraft2D/GameViewController.swift; sourceTree = "<group>"; };
+		AFD63F882036497100E08C66 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GameScene.swift; path = Starcraft2D/GameScene.swift; sourceTree = "<group>"; };
 		AFD63F8D203649F800E08C66 /* background-music-aac.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "background-music-aac.caf"; sourceTree = "<group>"; };
 		AFD63F8E203649F800E08C66 /* pew-pew-lei.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pew-pew-lei.caf"; sourceTree = "<group>"; };
 		D2A5F2001F4A9144005CD714 /* Starcraft2D.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Starcraft2D.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2A5F2081F4A9144005CD714 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		D2A5F20A1F4A9144005CD714 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = NinjaAttack/Assets.xcassets; sourceTree = "<group>"; };
-		D2A5F20F1F4A9144005CD714 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = NinjaAttack/Info.plist; sourceTree = "<group>"; };
-		D2A5F2201F4A96D0005CD714 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = NinjaAttack/AppDelegate.swift; sourceTree = "<group>"; };
+		D2A5F20A1F4A9144005CD714 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Starcraft2D/Assets.xcassets; sourceTree = "<group>"; };
+		D2A5F20F1F4A9144005CD714 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = Starcraft2D/Info.plist; sourceTree = "<group>"; };
+		D2A5F2201F4A96D0005CD714 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Starcraft2D/AppDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,13 +79,13 @@
 				AFD63F8E203649F800E08C66 /* pew-pew-lei.caf */,
 			);
 			name = Sounds;
-			path = NinjaAttack/Sounds;
+			path = Starcraft2D/Sounds;
 			sourceTree = "<group>";
 		};
 		D2A5F1F71F4A9143005CD714 = {
 			isa = PBXGroup;
 			children = (
-				D2A5F2021F4A9144005CD714 /* NinjaAttack */,
+				D2A5F2021F4A9144005CD714 /* Starcraft2D */,
 				D2A5F2011F4A9144005CD714 /* Products */,
 				7E5B035D20C54502005CB1C0 /* AthensClassic.ttf */,
 			);
@@ -99,10 +99,10 @@
 				D2A5F2001F4A9144005CD714 /* Starcraft2D.app */,
 			);
 			name = Products;
-			path = NinjaAttack;
+			path = Starcraft2D;
 			sourceTree = "<group>";
 		};
-		D2A5F2021F4A9144005CD714 /* NinjaAttack */ = {
+		D2A5F2021F4A9144005CD714 /* Starcraft2D */ = {
 			isa = PBXGroup;
 			children = (
 				7EDF8A3420C0DFF90071D2A3 /* Units */,
@@ -122,7 +122,7 @@
 				7E5B035B20C535FF005CB1C0 /* code a garder */,
 				7E33C98820D8B19C0012FEFB /* HealthBar.swift */,
 			);
-			name = NinjaAttack;
+			name = Starcraft2D;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,7 +225,7 @@
 				D2A5F2081F4A9144005CD714 /* Base */,
 			);
 			name = Main.storyboard;
-			path = NinjaAttack;
+			path = Starcraft2D;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -350,9 +350,9 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = "$(SRCROOT)/NinjaAttack/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Starcraft2D/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.razeware.NinjaAttack;
+				PRODUCT_BUNDLE_IDENTIFIER = com.razeware.Starcraft2D;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -369,9 +369,9 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
-				INFOPLIST_FILE = "$(SRCROOT)/NinjaAttack/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Starcraft2D/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.razeware.NinjaAttack;
+				PRODUCT_BUNDLE_IDENTIFIER = com.razeware.Starcraft2D;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
