@@ -2,12 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "battleground2d-2.png",
+      "filename" : "bullet5-1.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "battleground2d-1.png",
+      "filename" : "bullet5.png",
       "scale" : "2x"
     },
     {

@@ -33,3 +33,18 @@ SKAction.wait(forDuration: 5.0)
 //run(SKAction.playSoundFileNamed("pew-pew-lei.caf", waitForCompletion: false))
 // get la position du toucher 
 
+
+TODO :
+  Changer les textures
+  Mettre en place la jauge d'energie qui tourne tout le temps
+    // lancer une animation forever qui
+      // si value < 100
+          incremente la value de energy bar
+          lance la fonction qui re set la position de la barre (ou alors directement reset la position de la barre)
+
+lance une fonction avec une valeur
+    // 100 = on fait rien
+    /
+  Si startMode = true && joueur clique sur Maraudeur alors reduire la jauge d'energie
+
+  Trouver un moyen de mettre des putin de valeurs gobale au projet

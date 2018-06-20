@@ -8,6 +8,10 @@ func +(left: CGPoint, right: CGPoint) -> CGPoint {
   return CGPoint(x: left.x + right.x, y: left.y + right.y)
 }
 
+prefix func -(point: CGPoint) -> CGPoint {
+  return CGPoint(x:-point.x,y:-point.y)
+}
+
 func -(left: CGPoint, right: CGPoint) -> CGPoint {
   return CGPoint(x: left.x - right.x, y: left.y - right.y)
 }
@@ -32,18 +36,18 @@ func getNewBlocks(_ rows:Int, _ cols:Int)->Array<Block>{
   return blocks
 }
 
-func findTarget(_ unit:SKSpriteNode,_ player_units: Array<SKSpriteNode>)->SKSpriteNode{
+func findTarget(_ my_unit:SKSpriteNode,_ units: Array<SKSpriteNode>)->(SKSpriteNode,CGFloat){
   var min:CGFloat = 1000.0
-  var target = player_units[0]
+  var target = units[0]
   
-  for player_unit in player_units{
-    let distance = sqrt( pow((unit.position.x - player_unit.position.x),2) + pow((unit.position.y - player_unit.position.y),2) )
+  for unit in units{
+    let distance = sqrt( pow((my_unit.position.x - unit.position.x),2) + pow((my_unit.position.y - unit.position.y),2) )
     if distance < min{
       min = distance
-      target = player_unit
+      target = unit
     }
   }
-  return target
+  return (target,min)
 }
 
 func getRightUnit(_ position:CGPoint,_ units: Array<Unit>)-> Unit{
@@ -52,7 +56,6 @@ func getRightUnit(_ position:CGPoint,_ units: Array<Unit>)-> Unit{
   for unit in units{
     let unit_position:CGPoint = CGPoint.init(x:unit.position.x.rounded(.up),y:unit.position.y.rounded(.up))
     let node_position:CGPoint = CGPoint.init(x:position.x.rounded(.up),y:position.y.rounded(.up))
-    print(unit_position,node_position)
     if unit_position == node_position{
       return unit
     }

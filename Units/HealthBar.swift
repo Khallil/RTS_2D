@@ -7,7 +7,7 @@ class HealthBar: SKSpriteNode{
   
   convenience init() {
     let color = UIColor.green
-    let size = CGRect(origin:CGPoint(x:500.0, y:200.0),size: CGSize(width: 60, height: 10)).size
+    let size = CGRect(origin:CGPoint(x:500.0, y:200.0),size: CGSize(width: 60, height: 8)).size
     self.init(color:color,size:size)
     self.anchorPoint = CGPoint(x:0.0,y:0.5)
   }

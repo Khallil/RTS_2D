@@ -2,12 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "cube.png",
+      "filename" : "marauder.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "cube-1.png",
+      "filename" : "marauder-1.png",
       "scale" : "2x"
     },
     {

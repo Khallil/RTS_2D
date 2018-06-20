@@ -2,12 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Marine-1.png",
+      "filename" : "marine_bullet-1.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Marine.png",
+      "filename" : "marine_bullet.png",
       "scale" : "2x"
     },
     {

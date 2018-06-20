@@ -12,6 +12,7 @@
 		7E5B035A20C533A9005CB1C0 /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5B035920C533A9005CB1C0 /* Tools.swift */; };
 		7E5B035C20C535FF005CB1C0 /* code a garder in Resources */ = {isa = PBXBuildFile; fileRef = 7E5B035B20C535FF005CB1C0 /* code a garder */; };
 		7E5B035E20C54509005CB1C0 /* AthensClassic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7E5B035D20C54502005CB1C0 /* AthensClassic.ttf */; };
+		7E5C098E20DA477600CFCC6B /* Visu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5C098D20DA477600CFCC6B /* Visu.swift */; };
 		7EDF8A2F20C0D2DD0071D2A3 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDF8A2E20C0D2DD0071D2A3 /* Player.swift */; };
 		7EDF8A3120C0D9740071D2A3 /* Unit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDF8A3020C0D9740071D2A3 /* Unit.swift */; };
 		7EDF8A3320C0DD7A0071D2A3 /* Rec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDF8A3220C0DD7A0071D2A3 /* Rec.swift */; };
@@ -34,8 +35,9 @@
 		7E5B035920C533A9005CB1C0 /* Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
 		7E5B035B20C535FF005CB1C0 /* code a garder */ = {isa = PBXFileReference; lastKnownFileType = text; path = "code a garder"; sourceTree = "<group>"; };
 		7E5B035D20C54502005CB1C0 /* AthensClassic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AthensClassic.ttf; sourceTree = "<group>"; };
+		7E5C098D20DA477600CFCC6B /* Visu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Visu.swift; sourceTree = "<group>"; };
 		7EDF8A2E20C0D2DD0071D2A3 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Player.swift; path = Starcraft2D/Player.swift; sourceTree = "<group>"; };
-		7EDF8A3020C0D9740071D2A3 /* Unit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Unit.swift; path = Starcraft2D/Unit.swift; sourceTree = "<group>"; };
+		7EDF8A3020C0D9740071D2A3 /* Unit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit.swift; sourceTree = "<group>"; };
 		7EDF8A3220C0DD7A0071D2A3 /* Rec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rec.swift; sourceTree = "<group>"; };
 		7EDF8A3520C0F6DE0071D2A3 /* Cer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cer.swift; sourceTree = "<group>"; };
 		7EDF8A3720C0F6FC0071D2A3 /* Tri.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tri.swift; sourceTree = "<group>"; };
@@ -62,9 +64,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7E5C098F20DA47FC00CFCC6B /* Visu */ = {
+			isa = PBXGroup;
+			children = (
+				7E5C098D20DA477600CFCC6B /* Visu.swift */,
+			);
+			path = Visu;
+			sourceTree = "<group>";
+		};
 		7EDF8A3420C0DFF90071D2A3 /* Units */ = {
 			isa = PBXGroup;
 			children = (
+				7EDF8A3020C0D9740071D2A3 /* Unit.swift */,
+				7E33C98820D8B19C0012FEFB /* HealthBar.swift */,
 				7EDF8A3220C0DD7A0071D2A3 /* Rec.swift */,
 				7EDF8A3720C0F6FC0071D2A3 /* Tri.swift */,
 				7EDF8A3520C0F6DE0071D2A3 /* Cer.swift */,
@@ -105,6 +117,7 @@
 		D2A5F2021F4A9144005CD714 /* Starcraft2D */ = {
 			isa = PBXGroup;
 			children = (
+				7E5C098F20DA47FC00CFCC6B /* Visu */,
 				7EDF8A3420C0DFF90071D2A3 /* Units */,
 				AFD63F8C203649F800E08C66 /* Sounds */,
 				D2A5F2201F4A96D0005CD714 /* AppDelegate.swift */,
@@ -116,11 +129,9 @@
 				AFD63F862036493600E08C66 /* GameViewController.swift */,
 				7E1413CF20BFF30600156688 /* README.md */,
 				7EDF8A2E20C0D2DD0071D2A3 /* Player.swift */,
-				7EDF8A3020C0D9740071D2A3 /* Unit.swift */,
 				7EDF8A3920C110FF0071D2A3 /* Grid.swift */,
 				7E5B035920C533A9005CB1C0 /* Tools.swift */,
 				7E5B035B20C535FF005CB1C0 /* code a garder */,
-				7E33C98820D8B19C0012FEFB /* HealthBar.swift */,
 			);
 			name = Starcraft2D;
 			sourceTree = "<group>";
@@ -206,6 +217,7 @@
 				7EDF8A2F20C0D2DD0071D2A3 /* Player.swift in Sources */,
 				7EDF8A3320C0DD7A0071D2A3 /* Rec.swift in Sources */,
 				7EDF8A3820C0F6FC0071D2A3 /* Tri.swift in Sources */,
+				7E5C098E20DA477600CFCC6B /* Visu.swift in Sources */,
 				AFD63F892036497100E08C66 /* GameScene.swift in Sources */,
 				AFD63F872036493600E08C66 /* GameViewController.swift in Sources */,
 				7EDF8A3620C0F6DE0071D2A3 /* Cer.swift in Sources */,

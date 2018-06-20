@@ -78,8 +78,9 @@ class Grid:SKSpriteNode {
   
   func gridPosition(row:Int, col:Int) -> CGPoint {
     let b_cols = (blockSize * CGFloat(cols)) / 2.0
+    let b_rows = (blockSize * CGFloat(rows)) / 2.0
     let x = ((CGFloat(col) * blockSize - b_cols) + middle_x).rounded(.up)
-    let y = (CGFloat(row) * blockSize).rounded(.up)
+    let y = ((CGFloat(row) * blockSize - b_rows) + (middle_y-30)).rounded(.up)
     return CGPoint(x:x, y:y)
   }
   

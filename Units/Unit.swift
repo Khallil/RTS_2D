@@ -20,7 +20,23 @@ class Unit: SKSpriteNode{
     fatalError("init(coder:) has not been implemented")
   }
   
-  func unitPlacement(_ blocks:Array<Block>,_ player:Player,_ scene:SKScene,_ node:SKNode, _ index:Int, _ grid:Grid,_ name:String, _ units:Array<Unit>)-> (Array<Block>,Array<Unit>){
+  func placeEnemyUnit(_ blocks:Array<Block>,_ scene:SKScene,_ index:Int,_ grid:Grid,_ units:Array<Unit>)-> (Array<Block>,Array<Unit>){
+    var blocks = blocks
+    var units = units
+    let block = blocks[index]
+    
+    blocks[index].isFree = false
+    blocks[index].unit_name = "tri"
+    self.position = grid.gridPosition(row: block.coor.row+1, col: block.coor.col+1)
+    self.hb.position = CGPoint(x:self.position.x-30,y:self.position.y-25)
+    scene.addChild(self)
+    scene.addChild(self.hb)
+    units.append(self)
+    
+    return (blocks,units)
+  }
+  
+  func unitPlacement(_ blocks:Array<Block>,_ player:Player,_ scene:SKScene, _ index:Int, _ grid:Grid,_ name:String, _ units:Array<Unit>)-> (Array<Block>,Array<Unit>){
     var blocks = blocks
     var units = units
     let block = blocks[index]
@@ -34,7 +50,7 @@ class Unit: SKSpriteNode{
         blocks[index].isFree = false
         blocks[index].unit_name = name
         self.position = grid.gridPosition(row: block.coor.row+1, col: block.coor.col+1)
-        self.hb.position = CGPoint(x:self.position.x-30,y:self.position.y-30)
+        self.hb.position = CGPoint(x:self.position.x-30,y:self.position.y-25)
         // adding bar here
         //print(self.position)
         scene.addChild(self)
@@ -43,14 +59,15 @@ class Unit: SKSpriteNode{
       }
     }
     else if block.isFree == false && block.unit_name == name{
-        //node.removeFromParent()
         blocks[index].isFree = true
         blocks[index].unit_name = ""
         player.addMoney(self.cost)
-        unit = getRightUnit(grid.gridPosition(row: block.coor.row+1, col: block.coor.col+1),units)
-        unit.hb.removeFromParent()
-        unit.removeFromParent()
-        units.remove(at:units.index(of:unit)!)
+        if units.count > 0 {
+          unit = getRightUnit(grid.gridPosition(row: block.coor.row+1, col: block.coor.col+1),units)
+          unit.hb.removeFromParent()
+          unit.removeFromParent()
+          units.remove(at:units.index(of:unit)!)
+        }
     }
     else{
       print("block is not free block unit_name ==",block.unit_name)
