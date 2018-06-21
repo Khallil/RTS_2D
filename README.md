@@ -5,3 +5,5 @@
   XCode : 9.4
   
   Design Copyright :  Carbot Animations
+
+![alt text](https://raw.githubusercontent.com/Khallil/RTS_2D/master/Screenshot.png)
