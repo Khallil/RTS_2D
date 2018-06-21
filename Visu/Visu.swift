@@ -12,15 +12,14 @@ class Visu: SKSpriteNode {
     price.fontColor = SKColor.yellow
 
     super.init(texture: texture,color: UIColor.clear,size: texture.size())
-    print(image)
     if image == "cer"{
       self.name = "visuCer"
-      price.text = "500"    }
+      price.text = "200"    }
     if image == "rec"{
       // self.name = visu+name
       // price.text = global_var[self.name]
       self.name = "visuRec"
-      price.text = "350"
+      price.text = "400"
     }
     self.zPosition = 0.1
     //self.price.zPosition = 0

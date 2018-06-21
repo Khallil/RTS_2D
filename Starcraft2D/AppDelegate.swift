@@ -1,4 +1,3 @@
-/// Copyright (c) 2017 Razeware LLC
 
 import UIKit
 

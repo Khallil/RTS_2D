@@ -4,7 +4,7 @@ import SpriteKit
 
 class Rec: Unit {
   init(){
-    super.init(name:"rec",life:200,cost:350)
+    super.init(name:"rec",life:200,cost:400)
     self.physicsBody = SKPhysicsBody(circleOfRadius: self.size.width/2)
     self.physicsBody?.isDynamic = false// 2
     

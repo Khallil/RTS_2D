@@ -10,19 +10,23 @@
 		5C2901831F8F6DE700803663 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C2901821F8F6DE700803663 /* LaunchScreen.storyboard */; };
 		7E33C98920D8B19C0012FEFB /* HealthBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E33C98820D8B19C0012FEFB /* HealthBar.swift */; };
 		7E5B035A20C533A9005CB1C0 /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5B035920C533A9005CB1C0 /* Tools.swift */; };
-		7E5B035C20C535FF005CB1C0 /* code a garder in Resources */ = {isa = PBXBuildFile; fileRef = 7E5B035B20C535FF005CB1C0 /* code a garder */; };
 		7E5B035E20C54509005CB1C0 /* AthensClassic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7E5B035D20C54502005CB1C0 /* AthensClassic.ttf */; };
 		7E5C098E20DA477600CFCC6B /* Visu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5C098D20DA477600CFCC6B /* Visu.swift */; };
+		7E5C099320DA8D6A00CFCC6B /* EnergyBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5C099220DA8D6A00CFCC6B /* EnergyBar.swift */; };
+		7E8E049A20DB5E0D00CC075C /* GameOverScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E8E049920DB5E0D00CC075C /* GameOverScene.swift */; };
 		7EDF8A2F20C0D2DD0071D2A3 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDF8A2E20C0D2DD0071D2A3 /* Player.swift */; };
 		7EDF8A3120C0D9740071D2A3 /* Unit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDF8A3020C0D9740071D2A3 /* Unit.swift */; };
 		7EDF8A3320C0DD7A0071D2A3 /* Rec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDF8A3220C0DD7A0071D2A3 /* Rec.swift */; };
 		7EDF8A3620C0F6DE0071D2A3 /* Cer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDF8A3520C0F6DE0071D2A3 /* Cer.swift */; };
 		7EDF8A3820C0F6FC0071D2A3 /* Tri.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDF8A3720C0F6FC0071D2A3 /* Tri.swift */; };
 		7EDF8A3A20C110FF0071D2A3 /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EDF8A3920C110FF0071D2A3 /* Grid.swift */; };
+		7EECE32720DB6DE400EF97DC /* PlayerActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EECE32620DB6DE400EF97DC /* PlayerActions.swift */; };
+		7EECE32920DB6E4700EF97DC /* Animations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EECE32820DB6E4700EF97DC /* Animations.swift */; };
+		7EECE32D20DB8CF000EF97DC /* AddDynamicSprite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EECE32C20DB8CF000EF97DC /* AddDynamicSprite.swift */; };
+		7EECE32F20DB8D8300EF97DC /* HandleCollision.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EECE32E20DB8D8300EF97DC /* HandleCollision.swift */; };
+		7EECE33120DB9CC900EF97DC /* Screenshot.png in Resources */ = {isa = PBXBuildFile; fileRef = 7EECE33020DB9CC900EF97DC /* Screenshot.png */; };
 		AFD63F872036493600E08C66 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD63F862036493600E08C66 /* GameViewController.swift */; };
 		AFD63F892036497100E08C66 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD63F882036497100E08C66 /* GameScene.swift */; };
-		AFD63F8F203649F800E08C66 /* background-music-aac.caf in Resources */ = {isa = PBXBuildFile; fileRef = AFD63F8D203649F800E08C66 /* background-music-aac.caf */; };
-		AFD63F90203649F800E08C66 /* pew-pew-lei.caf in Resources */ = {isa = PBXBuildFile; fileRef = AFD63F8E203649F800E08C66 /* pew-pew-lei.caf */; };
 		D2A5F2091F4A9144005CD714 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2A5F2071F4A9144005CD714 /* Main.storyboard */; };
 		D2A5F20B1F4A9144005CD714 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D2A5F20A1F4A9144005CD714 /* Assets.xcassets */; };
 		D2A5F2211F4A96D0005CD714 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2A5F2201F4A96D0005CD714 /* AppDelegate.swift */; };
@@ -33,19 +37,23 @@
 		7E1413CF20BFF30600156688 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		7E33C98820D8B19C0012FEFB /* HealthBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthBar.swift; sourceTree = "<group>"; };
 		7E5B035920C533A9005CB1C0 /* Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
-		7E5B035B20C535FF005CB1C0 /* code a garder */ = {isa = PBXFileReference; lastKnownFileType = text; path = "code a garder"; sourceTree = "<group>"; };
 		7E5B035D20C54502005CB1C0 /* AthensClassic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = AthensClassic.ttf; sourceTree = "<group>"; };
 		7E5C098D20DA477600CFCC6B /* Visu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Visu.swift; sourceTree = "<group>"; };
-		7EDF8A2E20C0D2DD0071D2A3 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Player.swift; path = Starcraft2D/Player.swift; sourceTree = "<group>"; };
+		7E5C099220DA8D6A00CFCC6B /* EnergyBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnergyBar.swift; sourceTree = "<group>"; };
+		7E8E049920DB5E0D00CC075C /* GameOverScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOverScene.swift; sourceTree = "<group>"; };
+		7EDF8A2E20C0D2DD0071D2A3 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		7EDF8A3020C0D9740071D2A3 /* Unit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Unit.swift; sourceTree = "<group>"; };
 		7EDF8A3220C0DD7A0071D2A3 /* Rec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rec.swift; sourceTree = "<group>"; };
 		7EDF8A3520C0F6DE0071D2A3 /* Cer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cer.swift; sourceTree = "<group>"; };
 		7EDF8A3720C0F6FC0071D2A3 /* Tri.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tri.swift; sourceTree = "<group>"; };
 		7EDF8A3920C110FF0071D2A3 /* Grid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
+		7EECE32620DB6DE400EF97DC /* PlayerActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerActions.swift; sourceTree = "<group>"; };
+		7EECE32820DB6E4700EF97DC /* Animations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animations.swift; sourceTree = "<group>"; };
+		7EECE32C20DB8CF000EF97DC /* AddDynamicSprite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDynamicSprite.swift; sourceTree = "<group>"; };
+		7EECE32E20DB8D8300EF97DC /* HandleCollision.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HandleCollision.swift; sourceTree = "<group>"; };
+		7EECE33020DB9CC900EF97DC /* Screenshot.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Screenshot.png; sourceTree = "<group>"; };
 		AFD63F862036493600E08C66 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GameViewController.swift; path = Starcraft2D/GameViewController.swift; sourceTree = "<group>"; };
-		AFD63F882036497100E08C66 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GameScene.swift; path = Starcraft2D/GameScene.swift; sourceTree = "<group>"; };
-		AFD63F8D203649F800E08C66 /* background-music-aac.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "background-music-aac.caf"; sourceTree = "<group>"; };
-		AFD63F8E203649F800E08C66 /* pew-pew-lei.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "pew-pew-lei.caf"; sourceTree = "<group>"; };
+		AFD63F882036497100E08C66 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 		D2A5F2001F4A9144005CD714 /* Starcraft2D.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Starcraft2D.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2A5F2081F4A9144005CD714 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D2A5F20A1F4A9144005CD714 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Starcraft2D/Assets.xcassets; sourceTree = "<group>"; };
@@ -72,11 +80,23 @@
 			path = Visu;
 			sourceTree = "<group>";
 		};
+		7E8E049B20DB66A800CC075C /* GameScenes */ = {
+			isa = PBXGroup;
+			children = (
+				AFD63F882036497100E08C66 /* GameScene.swift */,
+				7E8E049920DB5E0D00CC075C /* GameOverScene.swift */,
+				7EECE32620DB6DE400EF97DC /* PlayerActions.swift */,
+				7EECE32820DB6E4700EF97DC /* Animations.swift */,
+				7EECE32C20DB8CF000EF97DC /* AddDynamicSprite.swift */,
+				7EECE32E20DB8D8300EF97DC /* HandleCollision.swift */,
+			);
+			path = GameScenes;
+			sourceTree = "<group>";
+		};
 		7EDF8A3420C0DFF90071D2A3 /* Units */ = {
 			isa = PBXGroup;
 			children = (
 				7EDF8A3020C0D9740071D2A3 /* Unit.swift */,
-				7E33C98820D8B19C0012FEFB /* HealthBar.swift */,
 				7EDF8A3220C0DD7A0071D2A3 /* Rec.swift */,
 				7EDF8A3720C0F6FC0071D2A3 /* Tri.swift */,
 				7EDF8A3520C0F6DE0071D2A3 /* Cer.swift */,
@@ -84,14 +104,29 @@
 			path = Units;
 			sourceTree = "<group>";
 		};
-		AFD63F8C203649F800E08C66 /* Sounds */ = {
+		7EECE32120DB672100EF97DC /* Bars */ = {
 			isa = PBXGroup;
 			children = (
-				AFD63F8D203649F800E08C66 /* background-music-aac.caf */,
-				AFD63F8E203649F800E08C66 /* pew-pew-lei.caf */,
+				7E5C099220DA8D6A00CFCC6B /* EnergyBar.swift */,
+				7E33C98820D8B19C0012FEFB /* HealthBar.swift */,
 			);
-			name = Sounds;
-			path = Starcraft2D/Sounds;
+			path = Bars;
+			sourceTree = "<group>";
+		};
+		7EECE32220DB674200EF97DC /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				7EDF8A2E20C0D2DD0071D2A3 /* Player.swift */,
+			);
+			path = Player;
+			sourceTree = "<group>";
+		};
+		7EECE32320DB675100EF97DC /* Grid */ = {
+			isa = PBXGroup;
+			children = (
+				7EDF8A3920C110FF0071D2A3 /* Grid.swift */,
+			);
+			path = Grid;
 			sourceTree = "<group>";
 		};
 		D2A5F1F71F4A9143005CD714 = {
@@ -100,6 +135,7 @@
 				D2A5F2021F4A9144005CD714 /* Starcraft2D */,
 				D2A5F2011F4A9144005CD714 /* Products */,
 				7E5B035D20C54502005CB1C0 /* AthensClassic.ttf */,
+				7EECE33020DB9CC900EF97DC /* Screenshot.png */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -117,21 +153,20 @@
 		D2A5F2021F4A9144005CD714 /* Starcraft2D */ = {
 			isa = PBXGroup;
 			children = (
+				7EECE32320DB675100EF97DC /* Grid */,
+				7EECE32220DB674200EF97DC /* Player */,
+				7EECE32120DB672100EF97DC /* Bars */,
+				7E8E049B20DB66A800CC075C /* GameScenes */,
 				7E5C098F20DA47FC00CFCC6B /* Visu */,
 				7EDF8A3420C0DFF90071D2A3 /* Units */,
-				AFD63F8C203649F800E08C66 /* Sounds */,
 				D2A5F2201F4A96D0005CD714 /* AppDelegate.swift */,
 				D2A5F2071F4A9144005CD714 /* Main.storyboard */,
 				D2A5F20A1F4A9144005CD714 /* Assets.xcassets */,
 				5C2901821F8F6DE700803663 /* LaunchScreen.storyboard */,
 				D2A5F20F1F4A9144005CD714 /* Info.plist */,
-				AFD63F882036497100E08C66 /* GameScene.swift */,
 				AFD63F862036493600E08C66 /* GameViewController.swift */,
 				7E1413CF20BFF30600156688 /* README.md */,
-				7EDF8A2E20C0D2DD0071D2A3 /* Player.swift */,
-				7EDF8A3920C110FF0071D2A3 /* Grid.swift */,
 				7E5B035920C533A9005CB1C0 /* Tools.swift */,
-				7E5B035B20C535FF005CB1C0 /* code a garder */,
 			);
 			name = Starcraft2D;
 			sourceTree = "<group>";
@@ -197,12 +232,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E5B035E20C54509005CB1C0 /* AthensClassic.ttf in Resources */,
-				7E5B035C20C535FF005CB1C0 /* code a garder in Resources */,
-				AFD63F8F203649F800E08C66 /* background-music-aac.caf in Resources */,
 				D2A5F20B1F4A9144005CD714 /* Assets.xcassets in Resources */,
 				5C2901831F8F6DE700803663 /* LaunchScreen.storyboard in Resources */,
-				AFD63F90203649F800E08C66 /* pew-pew-lei.caf in Resources */,
 				D2A5F2091F4A9144005CD714 /* Main.storyboard in Resources */,
+				7EECE33120DB9CC900EF97DC /* Screenshot.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,11 +247,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				7EDF8A3120C0D9740071D2A3 /* Unit.swift in Sources */,
+				7EECE32D20DB8CF000EF97DC /* AddDynamicSprite.swift in Sources */,
 				7EDF8A2F20C0D2DD0071D2A3 /* Player.swift in Sources */,
+				7EECE32920DB6E4700EF97DC /* Animations.swift in Sources */,
+				7EECE32F20DB8D8300EF97DC /* HandleCollision.swift in Sources */,
+				7E8E049A20DB5E0D00CC075C /* GameOverScene.swift in Sources */,
 				7EDF8A3320C0DD7A0071D2A3 /* Rec.swift in Sources */,
 				7EDF8A3820C0F6FC0071D2A3 /* Tri.swift in Sources */,
 				7E5C098E20DA477600CFCC6B /* Visu.swift in Sources */,
 				AFD63F892036497100E08C66 /* GameScene.swift in Sources */,
+				7EECE32720DB6DE400EF97DC /* PlayerActions.swift in Sources */,
+				7E5C099320DA8D6A00CFCC6B /* EnergyBar.swift in Sources */,
 				AFD63F872036493600E08C66 /* GameViewController.swift in Sources */,
 				7EDF8A3620C0F6DE0071D2A3 /* Cer.swift in Sources */,
 				7E33C98920D8B19C0012FEFB /* HealthBar.swift in Sources */,
@@ -359,12 +398,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 85YD232JDX;
 				INFOPLIST_FILE = "$(SRCROOT)/Starcraft2D/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.razeware.Starcraft2D;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Starcraft2D;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -378,12 +418,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 85YD232JDX;
 				INFOPLIST_FILE = "$(SRCROOT)/Starcraft2D/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.razeware.Starcraft2D;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Starcraft2D;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;

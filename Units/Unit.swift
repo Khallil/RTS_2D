@@ -28,6 +28,7 @@ class Unit: SKSpriteNode{
     blocks[index].isFree = false
     blocks[index].unit_name = "tri"
     self.position = grid.gridPosition(row: block.coor.row+1, col: block.coor.col+1)
+    blocks[index].position = self.position
     self.hb.position = CGPoint(x:self.position.x-30,y:self.position.y-25)
     scene.addChild(self)
     scene.addChild(self.hb)
@@ -50,6 +51,7 @@ class Unit: SKSpriteNode{
         blocks[index].isFree = false
         blocks[index].unit_name = name
         self.position = grid.gridPosition(row: block.coor.row+1, col: block.coor.col+1)
+        blocks[index].position = self.position
         self.hb.position = CGPoint(x:self.position.x-30,y:self.position.y-25)
         // adding bar here
         //print(self.position)
